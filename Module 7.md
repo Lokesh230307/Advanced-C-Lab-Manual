@@ -1,52 +1,61 @@
-EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
+EXP NO:1 Write a C program to find the biggest among three numbers using structure
 
-Aim:
-To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
-Algorithm:
-1.	Declare structure eligible with age (integer) and n (character array)
-2.	Declare variable e of type eligible
-3.	Input age and name using scanf, store in e
-4.	If e.age <= 6
--	Print "Vaccine Eligibility: No"
-Else
--	Print "Vaccine Eligibility: Yes"
-5.	Print details (e.age, e.n)
-6.	Return 0
- 
+AIM:
+
+To write a C program that uses a structure to find the biggest among three numbers entered by the user.
+
+ALGORITHM:
+
+Start
+
+Define a structure Numbers with three integer members: num1, num2, and num3.
+
+Declare a variable of type Numbers.
+
+Accept three integer inputs from the user and store them in the structure.
+
+Compare the three numbers using conditional statements (if-else).
+
+Display the largest number.
+
+End
+
+
 Program:
 ```
-#include<stdio.h>
-typedef struct
-{
-    int age;
-    char name[10];
-}vac;
+#include <stdio.h>
 
-int main()
-{
-    vac v;
-    scanf("%d %s",&v.age,v.name);
-    printf("Age:%d\n",v.age);
-    printf("Name:%svaccine:%d\n",v.name,v.age);
-    if (v.age>18)
-    {
-        printf("eligibility:yes");
+typedef struct{
+    int num1;
+    int num2;
+    int num3;
+}Numbers;
+
+int findlargest(Numbers n){
+    int largest=n.num1;
+    if(n.num2>largest){
+        largest=n.num2;
     }
-    else
-    {
-        printf("eligibility:no");
+    if(n.num3>largest){
+        largest=n.num3;
     }
+    return largest;
+}
+int main(){
+    Numbers n;
+    scanf("%d%d%d",&n.num1,&n.num2,&n.num3);
+    printf("%d",findlargest(n));
 }
 ```
 
 Output:
 
-![WhatsApp Image 2025-04-26 at 10 19 44_58dc145a](https://github.com/user-attachments/assets/bdab2d21-c912-466f-990c-9def31eb2d11)
+![image](https://github.com/user-attachments/assets/9faa17c2-4c60-44c6-985e-40879ab37c32)
 
 
 Result:
-Thus, the program is verified successfully. 
+Thus, the program is executed successfully. 
 
 
 
