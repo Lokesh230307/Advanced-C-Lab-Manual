@@ -1,68 +1,37 @@
-EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
+EXP NO:6 C Find a difference between two Numbers Using Pointer in C
+
 Aim:
-To write a C program print the lowercase English word corresponding to the number
+
+To write a C program to find the difference between two numbers using pointers.
+
+
 Algorithm:
-1.	Start
-- Initialize an integer variable n.
-2.	Input Validation
-3.	Switch Statement cases.
--	Case 5: Print "seventy one"
--	Case 6: Print "seventy two"
--	Case 13: Print "seventy three"
--	...
--	Case 13: Print "seventy nine"
--	Default: Print "Greater than 13"
-4.	Exit the program.
- 
+
+1.Start
+
+2.Declare two integer variables and two pointer variables.
+
+3.Accept two integer inputs from the user.
+
+4.Assign the addresses of the variables to the pointer variables.
+
+5.Calculate the difference using pointer dereferencing.
+
+6.Display the result.
+
+7.End
+
 Program:
 ```
 #include<stdio.h>
-int main()
-{
-    int n;
-    scanf("%d",&n);
-    switch(n)
-    {
-        case 21:
-        printf("twenty one");
-        break;
-        
-        case 22:
-        printf("twenty two");
-        break;
-        
-        case 23:
-        printf("twenty three");
-        break;
-        
-        case 24:
-        printf("twenty four");
-        break;
-        
-        case 25:
-        printf("twenty five");
-        break;
-        
-        case 26:
-        printf("twenty six");
-        break;
-        
-        case 27:
-        printf("twenty seven");
-        break;
-        
-        case 28:
-        printf("twenty eight");
-        break;
-        
-        case 29:
-        printf("twenty nine");
-        break;
-        
-        default:
-        printf("Greater than 29");
-        break;
-    }
+int main(){
+    int a,b,dif;
+    int *ptr1,*ptr2;
+    scanf("%d %d",&a,&b);
+    ptr1=&a;
+    ptr2=&b;
+    dif=*ptr1-*ptr2;
+    printf("%d",dif);
 }
 
 ```
@@ -71,58 +40,56 @@ int main()
 
 Output:
 
-
-
-![image](https://github.com/user-attachments/assets/eba24c97-dad9-4cc1-9125-835fa0c0b72f)
-
+![image](https://github.com/user-attachments/assets/9ad954ac-465e-4246-91b1-74acac4e6611)
 
 
 
 Result:
 Thus, the program is verified successfully
  
-EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
+EXP NO:7 Given a five digit integer n, print the sum of its digits.
+
 Aim:
-To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
+
+To write a C program that takes a five-digit integer as input and prints the sum of its digits.
+
 Algorithm:
-1.	Start
-2.	Declare char array a[50] outer loop for each digit from 0 to 3
-3.	Initialize counter c to 0
-4.	For each character in the string print count c for current digit, followed by a space
-5.	Increment h to move to the next digit
-6.	End
+
+Start
+
+Declare an integer variable n and sum = 0.
+
+Read the five-digit integer from the user.
+
+Use a loop to extract each digit (using % and /) and add it to sum.
+
+After the loop, print the sum.
+
+End
+
+
  
 Program:
 ```
 #include<stdio.h>
-#include<ctype.h>
 int main()
 {
-    char str[20];
-    scanf("%s",str);
-    int sum=0;
-    for(int j=48;j<=51;j++)
-    {
-        for(int i=0;str[i]!='\0';i++)
-        {
-            if(isdigit(str[i]))
-            {
-                if((int)str[i]==j)
-                {
-                    sum+=1;
-                }
-            }
-        }
-        printf("%d ",sum);
-        sum=0;
-    }
+    int a,n,sum=0;
+    scanf("%d",&a);
+    while(a>0){
+        n=a%10;
+        sum=n+sum;
+        a/=10;
+    }
+    printf("%d",sum);
 }
 ```
 
 Output:
 
 
-![image](https://github.com/user-attachments/assets/b9fe8948-1271-46da-b421-a95e6a0c4ce0)
+![image](https://github.com/user-attachments/assets/1dca8454-f3b0-4609-b459-602c7054a1f2)
+
 
 
 
