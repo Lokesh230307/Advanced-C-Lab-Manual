@@ -1,57 +1,55 @@
-EXP NO:1 Write a C program to find the biggest among three numbers using structure
+EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
 
+Aim: To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
-AIM:
+Algorithm:
 
-To write a C program that uses a structure to find the biggest among three numbers entered by the user.
+Declare structure eligible with age (integer) and n (character array)
 
-ALGORITHM:
+Declare variable e of type eligible
 
-Start
+Input age and name using scanf, store in e
 
-Define a structure Numbers with three integer members: num1, num2, and num3.
+If e.age <= 6
 
-Declare a variable of type Numbers.
+Print "Vaccine Eligibility: No" Else
 
-Accept three integer inputs from the user and store them in the structure.
+Print "Vaccine Eligibility: Yes"
 
-Compare the three numbers using conditional statements (if-else).
+Print details (e.age, e.n)
 
-Display the largest number.
-
-End
-
+Return 0
 
 Program:
 ```
-#include <stdio.h>
+#include<stdio.h>
+typedef struct
+{
+    int age;
+    char name[10];
+}vac;
 
-typedef struct{
-    int num1;
-    int num2;
-    int num3;
-}Numbers;
-
-int findlargest(Numbers n){
-    int largest=n.num1;
-    if(n.num2>largest){
-        largest=n.num2;
+int main()
+{
+    vac v;
+    scanf("%d %s",&v.age,v.name);
+    printf("Age:%d\n",v.age);
+    printf("Name:%svaccine:%d\n",v.name,v.age);
+    if (v.age>18)
+    {
+        printf("eligibility:yes");
     }
-    if(n.num3>largest){
-        largest=n.num3;
+    else
+    {
+        printf("eligibility:no");
     }
-    return largest;
-}
-int main(){
-    Numbers n;
-    scanf("%d%d%d",&n.num1,&n.num2,&n.num3);
-    printf("%d",findlargest(n));
 }
 ```
 
 Output:
 
-![image](https://github.com/user-attachments/assets/9faa17c2-4c60-44c6-985e-40879ab37c32)
+![image](https://github.com/user-attachments/assets/690b79aa-8474-4873-a93a-dbb8a8a9bb90)
+
 
 
 Result:
