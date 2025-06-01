@@ -1,119 +1,177 @@
-EXP NO:6 C Find a difference between two Numbers Using Pointer in C
+**EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER**
 
 Aim:
 
-To write a C program to find the difference between two numbers using pointers.
-
-
-Algorithm:
-
-1.Start
-
-2.Declare two integer variables and two pointer variables.
-
-3.Accept two integer inputs from the user.
-
-4.Assign the addresses of the variables to the pointer variables.
-
-5.Calculate the difference using pointer dereferencing.
-
-6.Display the result.
-
-7.End
-
-Program:
-```
-#include<stdio.h>
-int main(){
-    int a,b,dif;
-    int *ptr1,*ptr2;
-    scanf("%d %d",&a,&b);
-    ptr1=&a;
-    ptr2=&b;
-    dif=*ptr1-*ptr2;
-    printf("%d",dif);
-}
-
-```
-
-
-
-Output:
-
-![image](https://github.com/user-attachments/assets/9ad954ac-465e-4246-91b1-74acac4e6611)
-
-
-
-Result:
-Thus, the program is verified successfully
- 
-EXP NO:7 Given a five digit integer n, print the sum of its digits.
-
-Aim:
-
-To write a C program that takes a five-digit integer as input and prints the sum of its digits.
+To write a C program print the lowercase English word corresponding to the number 
 
 Algorithm:
 
 Start
 
-Declare an integer variable n and sum = 0.
+Initialize an integer variable n.
 
-Read the five-digit integer from the user.
+Input Validation
 
-Use a loop to extract each digit (using % and /) and add it to sum.
+Switch Statement cases.
 
-After the loop, print the sum.
+Case 5: Print "seventy one"
 
-End
+Case 6: Print "seventy two"
+
+Case 13: Print "seventy three"
+
+...
+
+Case 13: Print "seventy nine"
+
+Default: Print "Greater than 13"
+
+Exit the program.
 
 
- 
 Program:
 ```
 #include<stdio.h>
 int main()
 {
-    int a,n,sum=0;
-    scanf("%d",&a);
-    while(a>0){
-        n=a%10;
-        sum=n+sum;
-        a/=10;
-    }
-    printf("%d",sum);
+    int n;
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 21:
+        printf("twenty one");
+        break;
+        
+        case 22:
+        printf("twenty two");
+        break;
+        
+        case 23:
+        printf("twenty three");
+        break;
+        
+        case 24:
+        printf("twenty four");
+        break;
+        
+        case 25:
+        printf("twenty five");
+        break;
+        
+        case 26:
+        printf("twenty six");
+        break;
+        
+        case 27:
+        printf("twenty seven");
+        break;
+        
+        case 28:
+        printf("twenty eight");
+        break;
+        
+        case 29:
+        printf("twenty nine");
+        break;
+        
+        default:
+        printf("Greater than 29");
+        break;
+    }
+}
+
+
+```
+
+
+
+Output:
+
+![image](https://github.com/user-attachments/assets/f55b42de-13ac-4d75-8323-f9997e050438)
+
+
+Result:
+Thus, the program is verified successfully
+ 
+**EXP NO:7  C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS IN A SINGLE LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3**
+
+Aim:
+
+To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3
+
+Algorithm:
+
+Start
+
+Declare char array a[50] outer loop for each digit from 0 to 3
+
+Initialize counter c to 0
+
+For each character in the string print count c for current digit, followed by a space
+
+Increment h to move to the next digit
+
+End
+
+ 
+Program:
+```
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char str[20];
+    scanf("%s",str);
+    int sum=0;
+    for(int j=48;j<=51;j++)
+    {
+        for(int i=0;str[i]!='\0';i++)
+        {
+            if(isdigit(str[i]))
+            {
+                if((int)str[i]==j)
+                {
+                    sum+=1;
+                }
+            }
+        }
+        printf("%d ",sum);
+        sum=0;
+    }
 }
 ```
 
 Output:
 
-
-![image](https://github.com/user-attachments/assets/1dca8454-f3b0-4609-b459-602c7054a1f2)
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/d98c7075-0f7e-4769-aa8e-9bfe653415f9)
 
 
 Result:
 Thus, the program is verified successfully
 
-EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
+**EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.**
+
 Aim:
+
 To write a C program to print all of its permutations in strict lexicographical order.
 
 Algorithm:
+
 1.	Start
+
 2.	Declare variables s (pointer to an array of strings) and n (number of strings)
 
-3.	Memory Allocation
-Dynamically allocate memory for s to store an array of strings
+3.	Memory Allocation Dynamically allocate memory for s to store an array of strings
+
 4.	Input
 Read the number of strings n from the user Dynamically allocate memory for each string in s
+
 5.	Permutation Generation Loop
+
 6.	Memory Deallocation
+
 Free the memory allocated for each string in s Free the memory allocated for s
+
 7.	End
  
 Program:
@@ -166,8 +224,7 @@ Output:
 Result:
 Thus, the program is verified successfully
  
-EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
-SHOWN BELOW.
+**EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS SHOWN BELOW.**
 Aim:
 To write a C program to print a pattern of numbers from 1 to n as shown below.
 Algorithm:
@@ -216,7 +273,7 @@ Output:
 Result:
 Thus, the program is verified successfully
 
-EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
+**EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE**
 
 Aim:
 
